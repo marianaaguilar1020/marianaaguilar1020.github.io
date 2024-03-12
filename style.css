@@ -1,0 +1,320 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*HEADER*/
+:root header{
+    --altura_header:130px
+}
+header{
+    padding: 10px 0;
+    height: var(--altura_header);
+}
+header .contenedor-principal{
+    display: flex;
+    justify-content:center;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.contenedor-imagen{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+}
+.contenedor-imagen img{
+    max-width: 80px;
+    width: 100%;
+    margin: 20px 5px;
+    
+}
+.contenedor-secundario{
+    display: flex;
+    flex-wrap:wrap;
+}
+.contenedor-secundario-top{
+    display: flex;
+    align-items:center;
+    justify-content:space-between;
+    width: 100%;
+    height: 50%;
+}
+.contenedor-redes-sociales {
+    display: flex;
+    flex-wrap: nowrap !important;
+}
+.contenedor-redes-sociales i{
+    margin: 0 5px;
+}
+.contenedor-redes-sociales li{
+    list-style-type: none;
+    margin: 0 5px;
+}
+
+.contenedor-secundario-bottom{
+    width: 100%;
+    height: 50%;
+    justify-content: center;   
+}
+
+header ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+header nav ul li a {
+    color:#6f6c6c;
+    font-family: "Staatliches", sans-serif;
+    text-decoration: none;
+    font-size: 17px;
+    margin: 20px;
+}
+header nav ul li a:hover{
+    color: coral;
+}
+.navbar{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+.menu_hamburguesa{
+    display: none;
+}
+.menu_hamburguesa:checked + .ul_links{
+    height:calc(100vh - var(--altura_header)); 
+}
+.ul_links{
+    width: 100%;
+    background-color:#fff;
+    position: absolute;
+    top: var(--altura_header);
+    height: 0;
+    overflow: hidden;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.fa-solid{
+    color:#6f6c6c;
+    cursor: pointer;
+}
+
+/* PARTE PRINCIPAL DEL BODY*/
+video{
+    margin: 0%;
+    width: 100%;
+    height: 600px;
+}
+
+h1{
+    font-family: "Staatliches", sans-serif;
+    font-size: 50px;
+    color:#e89d00;
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 1.5;
+    margin-bottom: 1px;
+}
+.caja1{
+text-align: center;
+width: 100%;
+padding-right: 15px;
+padding-left: 15px;
+font-family: "Raleway", sans-serif;
+line-height: 1.7;
+}
+
+.caja1 p{
+    font-size: 16px;
+    text-align: center !important;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+
+/*-----SECCION COMPLETA MEJORES COSAS POR HACER------*/
+
+.caja2{
+    text-align: left;
+    font-family: "Raleway", sans-serif;
+    margin:3% 0 3% 0;
+}
+.caja2 p{
+    font-size: 16px;
+}
+
+/*-----CARRUSEL MEJORES COSAS POR HACER------*/
+.mejores-cosas-contenedor-general{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 7%;
+    margin-right: 7%;
+}
+
+/*---------- Contenedor de Titulo y Controles---------*/
+.contenedor-titulo-controles{
+    display: flex;
+    justify-content:space-between ;
+    align-items: end;
+}
+.contenedor-titulo-controles h3{
+    color: #fff;
+    font-size: 20px;
+}
+.contenedor-titulo-controles .indicadores button{
+    background: #fff;
+    height: 3px;
+    width: 10px;
+    cursor: pointer;
+    border: none;
+    margin-right: 2px;
+}
+
+/* ----------- Contenedor Principal y Flechas --------*/
+.pelicula img{
+    width: 250px;
+    height: 140px;
+}
+.peliculas-recomendadas{
+    margin-bottom: 30px;
+}
+
+.peliculas-recomendadas .contenedor-principal{
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-left: 5%;
+}
+.peliculas-recomendadas .contenedor-principal .flecha-izquierda,
+.peliculas-recomendadas .contenedor-principal .flecha-derecha {
+   position: absolute;
+   border: none;
+   background: rgba(0, 0, 0, 0.3);
+   font-size: 30px;
+   height: 15%;
+   top: calc(50% - 6%);
+   border-radius: 50%;
+   line-height: 40px;
+   width: 50px;
+   color: #fff;
+   cursor: pointer;
+   z-index: 500;
+   transition: .2s ease all;
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-izquierda:hover,
+.peliculas-recomendadas .contenedor-principal .flecha-derecha:hover{
+    background:rgba(0, 0, 0, .9);
+
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-izquierda{
+    left: 0;
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-derecha{
+    right: 0;
+}
+
+/*---------------- Carrusel --------------------*/
+.peliculas-recomendadas .contenedor-carrusel{
+    width: 100%;
+    padding: 20px 0;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    
+}
+
+.peliculas-recomendadas .contenedor-carrusel .carrusel{
+    display: flex;
+    flex-wrap: nowrap;    
+}
+
+.peliculas-recomendadas .contenedor-carrusel .carrusel .pelicula{
+    min-width:33.3%;
+    transition: .3s ease all;
+}
+
+.peliculas-recomendadas .contenedor-carrusel .carrusel .pelicula img{
+    width: 100%;
+    vertical-align: top;
+}
+    
+   
+.pelicula img{
+    width: 265px;
+    height:398px;
+}
+
+#planea-viaje{
+    margin-bottom: 30px;
+}
+
+
+/*---------------- FOOTER --------------------*/
+footer .contenedor-footer{
+    display: flex;
+    flex-wrap:wrap;
+    left: 0;
+    right: 0;
+    background-color: #415262;
+}
+
+footer .contenedor-logos{
+    margin: 0 32%;
+}
+
+footer.contenedor-footer .contenedor-logos{
+    text-align: center !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+}
+
+footer .contenedor-logos img{
+    max-width: 100%;
+    width: 150px;
+    height: 100px;
+    display: inline-block;
+    margin: 20px 10px;
+}
+
+    
+/*Media queries*/
+@media (min-width:768px){
+    .label_hamburguesa{
+        display: none;
+    }
+    .ul_links{
+        position: static;
+        width: auto;
+        height: auto;
+        flex-direction: row;
+        gap: 2rem;
+
+    }
+
+}
+
+
+@media screen and(max-width:700px){
+    .peliculas-recomendadas .contenedor-carrusel{
+        overflow: visible;
+    }
+
+    .peliculas-recomendadas .contenedor-carrusel .carrusel{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+}
+
+
